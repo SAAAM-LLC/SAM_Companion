@@ -1,0 +1,6 @@
+// file_paths.xml (for file provider)
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path name="sam_exports" path="exports/" />
+    <cache-path name="sam_temp" path="temp/" />
+</paths>

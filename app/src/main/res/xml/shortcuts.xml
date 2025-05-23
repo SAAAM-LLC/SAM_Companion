@@ -1,0 +1,27 @@
+// shortcuts.xml (for dynamic shortcuts)
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="quick_chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat"
+        android:shortcutShortLabel="@string/app_name"
+        android:shortcutLongLabel="Chat with SAM">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.saaam.companion"
+            android:targetClass="com.saaam.companion.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="trigger_evolution"
+        android:enabled="true"
+        android:icon="@drawable/ic_evolution"
+        android:shortcutShortLabel="Evolve SAM"
+        android:shortcutLongLabel="Trigger SAM Evolution">
+        <intent
+            android:action="com.saaam.companion.EVOLVE"
+            android:targetPackage="com.saaam.companion"
+            android:targetClass="com.saaam.companion.MainActivity" />
+    </shortcut>
+</shortcuts>
