@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.SAMCompanion" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/sam_primary</item>
-        <item name="colorSecondary">@color/sam_secondary</item>
-        <item name="colorBackground">@color/sam_background</item>
-        <item name="colorSurface">@color/sam_surface</item>
+    <!-- Base application theme -->
+    <style name="Theme.SAMCompanion" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Material 3 color system -->
+        <item name="android:colorPrimary">@color/sam_primary</item>
+        <item name="android:colorPrimaryDark">@color/sam_background</item>
+        <item name="android:colorAccent">@color/sam_primary</item>
+        <item name="android:colorBackground">@color/sam_background</item>
         <item name="android:statusBarColor">@color/sam_background</item>
         <item name="android:navigationBarColor">@color/sam_background</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowBackground">@color/sam_background</item>
+        <item name="android:textColorPrimary">@color/sam_text_primary</item>
+        <item name="android:textColorSecondary">@color/sam_text_secondary</item>
     </style>
 </resources>
