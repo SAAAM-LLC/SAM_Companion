@@ -1,8 +1,11 @@
 package com.saaam.companion
 
+import android.app.Application
+import android.util.Log
 import androidx.compose.animation.*
+import androidx.compose.animation.core.*
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -12,14 +15,32 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 
+// Application class
+class SAMApplication : Application() {
+    
+    companion object {
+        lateinit var instance: SAMApplication
+            private set
+    }
+    
+    override fun onCreate() {
+        super.onCreate()
+        instance = this
+        Log.i("SAMApplication", "SAM Companion application started")
+    }
+}
+
+// Composable functions for UI components
 @Composable
 fun SAMMenu(
     onDismiss: () -> Unit,
@@ -302,7 +323,7 @@ fun ResonanceIndicator(resonanceScore: Float) {
         Spacer(modifier = Modifier.height(4.dp))
 
         LinearProgressIndicator(
-            progress = resonanceScore,
+            progress = { resonanceScore },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(6.dp)
@@ -334,7 +355,7 @@ fun MenuActionButton(
         } else {
             Color(0xFF64ffda).copy(alpha = 0.1f)
         },
-        border = androidx.compose.foundation.BorderStroke(
+        border = BorderStroke(
             1.dp,
             if (isDestructive) {
                 Color(0xFFf06292).copy(alpha = 0.3f)
@@ -407,8 +428,14 @@ fun SAMCompanionTheme(
 fun AnimatedThinkingDots() {
     Row {
         repeat(3) { index ->
-            val alpha by animateFloatAsState(
-                targetValue = if ((System.currentTimeMillis() / 500) % 3 == index.toLong()) 1f else 0.3f,
+            val infiniteTransition = rememberInfiniteTransition(label = "dot_$index")
+            val alpha by infiniteTransition.animateFloat(
+                initialValue = 0.3f,
+                targetValue = 1f,
+                animationSpec = infiniteRepeatable(
+                    animation = tween(500, delayMillis = index * 150),
+                    repeatMode = RepeatMode.Reverse
+                ),
                 label = "thinking_dot_$index"
             )
             Box(
