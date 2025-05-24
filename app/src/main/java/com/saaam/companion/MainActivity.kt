@@ -1,4 +1,3 @@
-// Final Combined MainActivity.kt - Production Ready
 package com.saaam.companion
 
 import android.content.Intent
