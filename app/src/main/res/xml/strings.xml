@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SAM Companion</string>
+    <string name="app_description">Your personal AI that grows and evolves with you</string>
+
+    <!-- UI Strings -->
+    <string name="chat_input_hint">Share your thoughts with SAM...</string>
+    <string name="sam_thinking">SAM is thinking...</string>
+    <string name="sam_evolving">SAM is evolving...</string>
+    <string name="menu_title">SAM Control Center</string>
+
+    <!-- Action Strings -->
+    <string name="action_send">Send</string>
+    <string name="action_menu">Menu</string>
+    <string name="action_evolve">Force Evolution</string>
+    <string name="action_dream">Dream Cycle</string>
+    <string name="action_reset">Reset SAM</string>
+    <string name="action_export">Export</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Status Strings -->
+    <string name="status_initializing">Initializing neural pathways...</string>
+    <string name="status_ready">Ready for interaction</string>
+    <string name="status_evolving">Evolving neural architecture...</string>
+    <string name="status_dreaming">Entering dream state...</string>
+
+    <!-- Descriptions -->
+    <string name="evolve_description">Trigger neural architecture growth</string>
+    <string name="dream_description">Process concepts and form connections</string>
+    <string name="reset_description">Return to initial state</string>
+    <string name="export_description">Save chat history and growth data</string>
+    <string name="settings_description">Configure learning parameters</string>
+
+    <!-- Quick Actions -->
+    <string name="quick_about">Tell me about yourself</string>
+    <string name="quick_learn">Help me learn</string>
+    <string name="quick_dream">Dream cycle</string>
+    <string name="quick_stats">Show stats</string>
+
+    <!-- Neural Architecture -->
+    <string name="neural_concepts">Concepts</string>
+    <string name="neural_growth">Growth</string>
+    <string name="neural_dreams">Dreams</string>
+    <string name="neural_hidden_dim">Hidden Dim</string>
+    <string name="neural_layers">Layers</string>
+    <string name="neural_thought_depth">Thought Depth</string>
+    <string name="neural_resonance">Conceptual Resonance</string>
+
+    <!-- Error Messages -->
+    <string name="error_initialization">Failed to initialize SAM - running in basic mode</string>
+    <string name="error_processing">Error processing message</string>
+    <string name="error_export">Failed to export conversation</string>
+
+    <!-- Success Messages -->
+    <string name="success_evolution">Evolution complete - enhanced capabilities</string>
+    <string name="success_dream">Dream cycle complete</string>
+    <string name="success_export">Conversation exported successfully</string>
+    <string name="success_reset">SAM reset complete</string>
+</resources>
