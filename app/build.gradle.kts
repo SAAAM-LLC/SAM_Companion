@@ -77,6 +77,7 @@ dependencies {
     
     // Animation
     implementation("androidx.compose.animation:animation")
+    implementation("androidx.compose.animation:animation-core")
 
     // ViewModel and State
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
@@ -84,6 +85,9 @@ dependencies {
 
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.7.6")
+    
+    // Pager
+    implementation("androidx.compose.foundation:foundation")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
