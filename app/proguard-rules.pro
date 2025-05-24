@@ -1,4 +1,3 @@
-// ProGuard rules (proguard-rules.pro)
 # Keep SAM core classes
 -keep class com.saaam.companion.** { *; }
 
